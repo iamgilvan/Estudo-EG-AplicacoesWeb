@@ -33,10 +33,10 @@ public class RedirComServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String usuario = request.getParameter("usuario");
             String senha = request.getParameter("senha");
-            if (usuario.equals("edson") $$ senha.equals("123")) {
+            if (usuario.equals("edson") && senha.equals("123")) {
                 response.sendRedirect("usuario_val.html");
-            }else{
-                    response.sendRedirect("usuario_inv.html");
+            } else{
+                response.sendRedirect("usuario_inv.html");
                 }
         }
     }
