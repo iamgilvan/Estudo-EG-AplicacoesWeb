@@ -24,6 +24,14 @@
         <servlet-name>VisualizaCookie</servlet-name>
         <servlet-class>meupacote.VisualizaCookie</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletSessionPagUm</servlet-name>
+        <servlet-class>meupacote.ServletSessionPagUm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletSessionPagDois</servlet-name>
+        <servlet-class>meupacote.ServletSessionPagDois</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TrabOutrosMetComServlet</servlet-name>
         <url-pattern>/TrabOutrosMetComServlet</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>VisualizaCookie</servlet-name>
         <url-pattern>/VisualizaCookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletSessionPagUm</servlet-name>
+        <url-pattern>/ServletSessionPagUm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletSessionPagDois</servlet-name>
+        <url-pattern>/ServletSessionPagDois</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
