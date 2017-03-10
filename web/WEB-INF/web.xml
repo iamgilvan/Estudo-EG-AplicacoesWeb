@@ -20,6 +20,10 @@
         <servlet-name>CriandoCookie</servlet-name>
         <servlet-class>meupacote.CriandoCookie</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VisualizaCookie</servlet-name>
+        <servlet-class>meupacote.VisualizaCookie</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TrabOutrosMetComServlet</servlet-name>
         <url-pattern>/TrabOutrosMetComServlet</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>CriandoCookie</servlet-name>
         <url-pattern>/CriandoCookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisualizaCookie</servlet-name>
+        <url-pattern>/VisualizaCookie</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
