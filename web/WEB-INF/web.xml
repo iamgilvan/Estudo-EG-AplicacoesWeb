@@ -8,6 +8,10 @@
         <servlet-name>VarrendoTodosObjetos</servlet-name>
         <servlet-class>meupacote.VarrendoTodosObjetos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecCabecalhos</servlet-name>
+        <servlet-class>meupacote.RecCabecalhos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TrabOutrosMetComServlet</servlet-name>
         <url-pattern>/TrabOutrosMetComServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>VarrendoTodosObjetos</servlet-name>
         <url-pattern>/VarrendoTodosObjetos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecCabecalhos</servlet-name>
+        <url-pattern>/RecCabecalhos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
