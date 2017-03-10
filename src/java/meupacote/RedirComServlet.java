@@ -1,8 +1,12 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package meupacote;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author gilvan
  */
-public class RecCabecalhos extends HttpServlet {
+public class RedirComServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -27,19 +31,13 @@ public class RecCabecalhos extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            Enumeration e = request.getHeaderNames();
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Trabalhando com Servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            while (e.hasMoreElements()) {
-                String cabecalho = (String) e.nextElement();
-                out.println("<strong>"+cabecalho+"</strong>" + request.getHeader(cabecalho)+ "<br/>");
-            }
-            out.println("</body>");
-            out.println("</html>");
+            String usuario = request.getParameter("usuario");
+            String senha = request.getParameter("senha");
+            if (usuario.equals("edson") $$ senha.equals("123")) {
+                response.sendRedirect("usuario_val.html");
+            }else{
+                    response.sendRedirect("usuario_inv.html");
+                }
         }
     }
 
