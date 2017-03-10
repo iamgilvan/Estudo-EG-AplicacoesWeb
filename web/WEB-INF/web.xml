@@ -16,6 +16,10 @@
         <servlet-name>RedirComServlet</servlet-name>
         <servlet-class>meupacote.RedirComServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CriandoCookie</servlet-name>
+        <servlet-class>meupacote.CriandoCookie</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TrabOutrosMetComServlet</servlet-name>
         <url-pattern>/TrabOutrosMetComServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>RedirComServlet</servlet-name>
         <url-pattern>/RedirComServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CriandoCookie</servlet-name>
+        <url-pattern>/CriandoCookie</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
