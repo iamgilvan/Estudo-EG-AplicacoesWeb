@@ -32,6 +32,10 @@
         <servlet-name>ServletSessionPagDois</servlet-name>
         <servlet-class>meupacote.ServletSessionPagDois</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletFecharSessao</servlet-name>
+        <servlet-class>meupacote.ServletFecharSessao</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TrabOutrosMetComServlet</servlet-name>
         <url-pattern>/TrabOutrosMetComServlet</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ServletSessionPagDois</servlet-name>
         <url-pattern>/ServletSessionPagDois</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletFecharSessao</servlet-name>
+        <url-pattern>/ServletFecharSessao</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

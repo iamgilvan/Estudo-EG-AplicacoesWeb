@@ -8,7 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class ServletSessionPagDois extends HttpServlet {
+/**
+ *
+ * @author gilvan
+ */
+public class ServletFecharSessao extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -24,19 +28,18 @@ public class ServletSessionPagDois extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             HttpSession sessao = request.getSession(true);
+            
+            sessao.removeAttribute("nome");
             String nome = (String)sessao.getAttribute("nome");
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletSessionPagDois</title>");            
+            out.println("<title>Terminando uma Sessão</title>");            
             out.println("</head>");
             out.println("<body>");
-            if (nome!=null) {
-                out.println("Sua ID é:<strong>"+ sessao.getId() +"</strong><br/>E seu nome é: <strong>"+nome+"</strong>");
-                out.println("<a href=\"ServletFecharSessao\">Clique aqui</a>"+" para fechar a sessão.");
-            } else{
-                out.println("Sua sessão não foi criada.<br/><a href=\"ServltSessionPagUm\">Clique aqui</a> para criar a sua sessão  " );
-            }
+            out.println("Sua ID é:<strong>"+ sessao.getId() +"</strong><br/>E seu nome é: <strong>"+nome+"</strong>");
+            out.println("<a href=\"ServltSessionPagUm\">Clique aqui</a> para iniciar uma nova sua sessão  " );
             out.println("</body>");
             out.println("</html>");
         }
